@@ -27,23 +27,24 @@ public class Solution<T> extends ArrayList<T> {
 
     public class RoundIterator implements Iterator<T> {
         Iterator iterator = Solution.super.iterator();
-        int cursor = 0;
+        int s = 0;
 
         @Override
         public boolean hasNext() {
-            if (size() == 0)
+            if (size() == 0) {
                 return false;
+            }
 
-            if (cursor >= size()) {
+            if (s >= size()) {
                 iterator = Solution.super.iterator();
-                cursor = 0;
+                s = 0;
             }
             return true;
         }
 
         @Override
         public T next() {
-            cursor++;
+            s++;
             return (T) iterator.next();
         }
 
