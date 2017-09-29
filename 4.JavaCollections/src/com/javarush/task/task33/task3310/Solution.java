@@ -52,8 +52,7 @@ public class Solution {
         Helper.printMessage(strategy.getClass().getSimpleName());
 
         Set<String> testSetStrings = new HashSet<>();
-        for (long i = 0; i < elementsNumber; i++)
-        {
+        for (long i = 0; i < elementsNumber; i++) {
             testSetStrings.add(Helper.generateRandomString());
         }
 
